@@ -1,4 +1,4 @@
-
 packagecache/
-fmt-9.1.0
-SDL2-2.26.0
+fmt-*
+argparse-*
+SDL2-*
