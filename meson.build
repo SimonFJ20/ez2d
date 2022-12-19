@@ -4,7 +4,7 @@ project(
     version: '0.1',
     default_options: [
         'warning_level=3',
-        'cpp_std=c++latest',
+        'cpp_std=c++20',
         'default_library=static',
     ],
 )
@@ -28,8 +28,8 @@ endif
 
 if build_machine.system() == 'windows'
     add_project_arguments(['-DON_WINDOWS'], language: 'cpp')
-else if build_machine.system() == 'linux'
-    add_project_arguments(['-DON_LINUX'], language 'cpp')
+elif build_machine.system() == 'linux'
+    add_project_arguments(['-DON_LINUX'], language: 'cpp')
 else
     error('not setup for building on', build_machine.system(), '(yet)')
 endif
